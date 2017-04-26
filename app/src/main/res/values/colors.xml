@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorActionBar">#FFDB35</color>
+    <color name="colorGrey">#80909090</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorYellow">#F8ECB4</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorHint">#90595959</color>
+    <color name="colorStatusBarText">#515658</color>
+    <color name="colorActionBarPressed">#FFAA25</color>
+    <color name="colorAlertDialogueBackGround">#BABA94</color>
+</resources>

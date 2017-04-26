@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorYellow">
+
+    <include layout="@layout/widget_action_bar_biz_page"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/widget_dsp_config2"/>
+
+                <TextView
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@color/colorGrey"
+                    android:text="设置显示格式"
+                    android:textSize="@dimen/font_small"/>
+                <RadioGroup
+                    android:id="@+id/activity_biz_rdgp_display_format"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/activity_biz_rbtn_format_hex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_smaller"
+                        android:textColor="@color/colorBlack"
+                        android:text="Hex"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_smaller"
+                        android:text="ASC码"/>
+                </RadioGroup>
+
+                <TextView
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@color/colorGrey"
+                    android:text="保留测试记录"
+                    android:textSize="@dimen/font_small"/>
+
+                <RadioGroup
+                    android:id="@+id/activity_biz_rdgp_is_keep_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/activity_biz_rbtn_do_not_keep_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_smaller"
+                        android:textColor="@color/colorBlack"
+                        android:text="不保存"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/font_smaller"
+                        android:text="保存"/>
+                </RadioGroup>
+                <ToggleButton
+                    android:id="@+id/activity_biz_tgbtn_is_keep_band_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/toggle_button_height_1"
+                    android:textSize="@dimen/font_smaller"
+                    android:textOff="不要基带数据"
+                    android:textOn="保存基带数据"
+                    />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/activity_biz_btn_show_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_button_height"
+                    android:textSize="@dimen/font_small"
+                    android:textColor="@color/colorBlack"
+                    android:text="显示历史Log"/>
+                <Button
+                    android:id="@+id/activity_biz_btn_delete_all_files"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_button_height"
+                    android:textSize="@dimen/font_small"
+                    android:textColor="@color/colorBlack"
+                    android:text="清除所有记录"/>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_small"
+                android:gravity="center"
+                android:text="数据明细"
+                android:background="@color/colorGrey"
+                android:textColor="@color/colorBlack"
+               />
+            <LinearLayout
+                android:id="@+id/activity_biz_ll_record_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="@color/colorActionBar"
+                android:orientation="horizontal">
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:textColor="@color/colorStatusBarText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="测试记录："/>
+
+                <TextView
+                    android:textColor="@color/colorStatusBarText"
+                    android:id="@+id/activity_biz_tv_data_file_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="null"/>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+            <ListView
+                android:id="@+id/activity_biz_lstv_biz_data"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:keepScreenOn="true"
+                android:layout_weight="1"/>
+            <ListView
+                android:id="@+id/activity_biz_lstv_tuner_data"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorActionBar">
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:textColor="@color/colorStatusBarText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时长(秒)："/>
+                <TextView
+                    android:textColor="@color/colorStatusBarText"
+                    android:id="@+id/activity_biz_tv_file_time_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"/>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/activity_biz_tgbtn_start_biz"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/toggle_button_height_1"
+                    android:textSize="@dimen/font_smaller"
+                    android:textOff="开始业务数据"
+                    android:textOn="停止业务数据"
+                    />
+
+                <ToggleButton
+                    android:id="@+id/activity_biz_tgbtn_start_tuner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_smaller"
+                    android:layout_height="@dimen/toggle_button_height_1"
+                    android:textOff="开始原始数据"
+                    android:textOn="停止原始数据"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/activity_biz_tv_biz_data_count"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_view_height_1"
+                android:text="返回数量：0"
+                android:textSize="@dimen/font_small"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:background="@color/colorGrey"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="数据传输状态栏"
+                android:textSize="@dimen/font_small"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:background="@color/colorGrey"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorActionBar">
+                <TextView
+                    android:textColor="@color/colorStatusBarText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Status"/>
+                <TextView
+                    android:textColor="@color/colorStatusBarText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="SFO"/>
+                <TextView
+                    android:textColor="@color/colorStatusBarText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="CFO"/>
+                <TextView
+                    android:textColor="@color/colorStatusBarText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Success"/>
+                <TextView
+                    android:textColor="@color/colorStatusBarText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Fail"/>
+                <TextView
+                    android:textColor="@color/colorStatusBarText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="SNR"/>
+            </LinearLayout>
+            <ListView
+                android:id="@+id/activity_biz_lstv_data_quality"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:keepScreenOn="true"
+                android:layout_weight="1"/>
+            <include layout="@layout/widget_data_quality_statistic"/>
+            <HorizontalScrollView
+                android:background="@color/colorBlack"
+                android:id="@+id/activity_biz_scrv_view_container"
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_height="@dimen/scrollViewHeight">
+                <com.skycaster.l_cdradiorxdemo.widgets.WaveView
+                    android:id="@+id/activity_biz_wv_snr_wave_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </HorizontalScrollView>
+            <ToggleButton
+                android:id="@+id/activity_biz_tgbtn_quality_check"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/font_small"
+                android:layout_height="@dimen/toggle_button_height_1"
+                android:textOn="停止监测"
+                android:textOff="开始监测"
+                />
+            <TextView
+                android:id="@+id/activity_biz_tv_miss_count"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_view_height_1"
+                android:text="跳帧数量：0"
+                android:textSize="@dimen/font_small"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:background="@color/colorGrey"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

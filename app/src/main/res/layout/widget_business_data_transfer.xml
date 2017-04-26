@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_small"
+        android:background="@color/colorActionBar"
+        android:gravity="center"
+        android:text="基带数据传输"/>
+
+    <Button
+        android:id="@+id/main_btn_start_service_data"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="接收基带数据">
+    </Button>
+
+    <TextView
+        android:id="@+id/main_tv_start_service_data_feed_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="操作结果：null"/>
+    <ListView
+        android:id="@+id/main_lstv_service_data_console"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="跳帧次数："/>
+
+        <TextView
+            android:id="@+id/main_tv_band_data_loss_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/main_btn_stop_service_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止基带数据"/>
+
+    <TextView
+        android:id="@+id/main_tv_stop_service_data_feed_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="操作结果：null"/>
+
+    <Button
+        android:id="@+id/main_btn_check_band_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="检测基带数据序号"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="MissMatch"/>
+        <TextView
+            android:id="@+id/main_tv_check_band_id_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/main_btn_test_service_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示业务数据数量"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="返回次数:"/>
+
+        <TextView
+            android:id="@+id/main_tv_service_data_test_result"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="null"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/main_btn_write_band_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存基带数据至band_data.bin"/>
+    <Button
+        android:id="@+id/main_btn_write_service_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存业务数据至business_data.bin"/>
+
+    <Button
+        android:id="@+id/main_btn_clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清理缓存"/>
+
+
+</LinearLayout>

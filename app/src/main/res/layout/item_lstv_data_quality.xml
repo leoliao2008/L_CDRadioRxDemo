@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/item_data_quality_tv_status"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:layout_height="wrap_content"
+        android:text="decoding"
+        />
+    <TextView
+        android:id="@+id/item_data_quality_tv_time_offset"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:layout_height="wrap_content"
+        android:text="time offset"
+        />
+    <TextView
+        android:id="@+id/item_data_quality_tv_freq_offset"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:layout_height="wrap_content"
+        android:text="freq offset"
+        />
+    <TextView
+        android:id="@+id/item_data_quality_tv_success"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:layout_height="wrap_content"
+        android:text="0"/>
+    <TextView
+        android:id="@+id/item_data_quality_tv_fail"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="0"/>
+    <TextView
+        android:id="@+id/item_data_quality_tv_SNR"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="SNR"/>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/show_brand_transfer_listview"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        />
+    <!--<Button-->
+        <!--android:id="@+id/show_brand_transfer_start_for_1s"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="测试传输一秒钟"-->
+        <!--android:textSize="@dimen/font_small"-->
+        <!--/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="跳帧的次数："/>
+        <TextView
+            android:id="@+id/show_brand_transfer_tv_miss_count"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/show_brand_transfer_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止原始数据传输"
+        android:textSize="@dimen/font_small"
+        />
+    <TextView
+        android:id="@+id/show_brand_transfer_feed_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_small"
+        android:text="DSP返回结果："/>
+
+    <Button
+        android:id="@+id/main_btn_check_frame_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="检测原始数据序号"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="MissMatch"/>
+        <TextView
+            android:id="@+id/main_tv_miss_count_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_write_tuner_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="写入原始数据至tuner_data.bin"/>
+
+</LinearLayout>

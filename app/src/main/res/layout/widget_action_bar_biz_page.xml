@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/colorActionBar"
+    >
+    <Button
+        android:id="@+id/activity_biz_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/action_bar_button_height"
+        android:textSize="@dimen/font_small"
+        android:layout_margin="@dimen/action_bar_margin_small"
+        android:text="Exit"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/action_bar_margin_small">
+
+        <Button
+            android:id="@+id/activity_biz_btn_dsp_info"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/action_bar_button_height"
+            android:textSize="@dimen/font_small"
+            android:text="DSP信息"/>
+        <Button
+            android:id="@+id/activity_biz_btn_reset_connection"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/action_bar_button_height"
+            android:textSize="@dimen/font_small"
+            android:text="重置连接"/>
+        <Button
+            android:id="@+id/activity_biz_btn_upgrade"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/action_bar_button_height"
+            android:textSize="@dimen/font_small"
+            android:text="升级"/>
+        <!--<Button-->
+            <!--android:id="@+id/activity_biz_btn_send_upg"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="@dimen/action_bar_button_height"-->
+            <!--android:textSize="@dimen/font_small"-->
+            <!--android:text=""/>-->
+    </LinearLayout>
+
+    <TextView
+        android:clickable="true"
+        android:id="@+id/activity_biz_action_bar_title"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="点击获取DSP版本号"
+        android:textColor="@color/selector_color_detect_dsp"
+        android:textSize="@dimen/font_small"/>
+
+    <TextView
+        android:id="@+id/activity_biz_action_bar_tv_app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/font_smaller"
+        android:text="当前APP版本：获取失败"
+        android:layout_marginRight="@dimen/margin_right_1"/>
+
+</LinearLayout>

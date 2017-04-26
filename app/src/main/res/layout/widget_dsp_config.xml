@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_small"
+        android:text="配置DSP参数"
+        android:gravity="center"
+        android:background="@color/colorActionBar"/>
+    //频偏
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="频偏"/>
+        <EditText
+            android:id="@+id/main_edt_input_pinpian"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"/>
+
+    </LinearLayout>
+
+    //时偏
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="时偏"/>
+        <EditText
+            android:id="@+id/main_edt_input_shipian"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"/>
+
+
+    </LinearLayout>
+
+    //频点
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="频点"/>
+        <EditText
+            android:id="@+id/main_edt_input_pindian"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_set_params_at_once"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置"/>
+
+
+</LinearLayout>

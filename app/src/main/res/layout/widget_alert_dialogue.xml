@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:text="注意"
+        android:gravity="center"
+        android:textSize="@dimen/action_bar_text_size"
+        android:textColor="@color/colorBlack"
+        android:background="@color/colorActionBar"/>
+
+    <TextView
+        android:id="@+id/widget_alert_dialogue_tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:text="test"
+        android:padding="@dimen/padding_text_1"
+        android:textSize="@dimen/font_normal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/widget_alert_dialogue_btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/action_bar_button_height"
+            android:layout_margin="@dimen/margin_right_1"
+            android:textSize="@dimen/font_normal"
+            android:layout_weight="1"
+            android:text="确定"/>
+
+        <Button
+            android:id="@+id/widget_alert_dialogue_btn_cancel"
+            android:layout_width="0dp"
+            android:textSize="@dimen/font_normal"
+            android:layout_height="@dimen/action_bar_button_height"
+            android:layout_margin="@dimen/margin_right_1"
+            android:layout_weight="1"
+            android:text="取消"/>
+
+    </LinearLayout>
+
+</LinearLayout>

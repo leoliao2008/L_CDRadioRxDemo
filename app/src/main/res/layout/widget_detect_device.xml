@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/main_btn_detect_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_small"
+            android:text="检测设备"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_small"
+            android:text="VendorId:"/>
+        <TextView
+            android:id="@+id/main_tv_vendor_id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_small"
+            android:text="null"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_small"
+            android:text="ProductId:"/>
+        <TextView
+            android:id="@+id/main_tv_product_id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_small"
+            android:text="null"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/main_btn_mad_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="检测设备同时初始化频点、两项滤波参数"/>
+    <TextView
+        android:id="@+id/main_tv_mad_start_fb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="操作结果："/>
+    <Button
+        android:id="@+id/main_btn_check_dsp_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看DSP端口明细"/>
+
+
+</LinearLayout>

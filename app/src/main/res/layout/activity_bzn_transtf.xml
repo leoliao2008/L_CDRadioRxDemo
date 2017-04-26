@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/activity_bzn_btn_start_bzn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始业务数据传输"
+        android:textSize="@dimen/font_small"
+        />
+    <Button
+        android:id="@+id/activity_bzn_btn_stop_bzn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止业务数据传输"
+        android:textSize="@dimen/font_small"
+        />
+    <TextView
+        android:id="@+id/activity_bzn_tv_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_small"
+        android:text="DSP回馈状态："/>
+    <ListView
+        android:id="@+id/activity_bzn_lstv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

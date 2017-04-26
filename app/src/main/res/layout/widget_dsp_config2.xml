@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_small"
+        android:text="设置DSP参数"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:background="@color/colorGrey"/>
+
+
+    //频点
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/font_small"
+            android:layout_height="wrap_content"
+            android:text="频点"/>
+        <EditText
+            android:id="@+id/widget_dsp_config2_edt_freq"
+            android:textColor="@color/colorBlack"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="98"
+            android:textSize="@dimen/font_small"
+            android:textColorHint="@color/colorHint"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+
+    </LinearLayout>
+
+    //tone left
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/font_small"
+            android:layout_height="wrap_content"
+            android:text="ToneLeft"/>
+        <EditText
+            android:textColor="@color/colorBlack"
+            android:id="@+id/widget_dsp_config2_edt_tone_left"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColorHint="@color/colorHint"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_small"
+            android:hint="36"
+            android:inputType="numberSigned"/>
+
+    </LinearLayout>
+
+    //tone right
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:textColor="@color/colorBlack"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_small"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="ToneRight"/>
+        <EditText
+            android:textColor="@color/colorBlack"
+            android:id="@+id/widget_dsp_config2_edt_tone_right"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="45"
+            android:textColorHint="@color/colorHint"
+            android:textSize="@dimen/font_small"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/widget_dsp_config2_btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:text="确定"
+        android:textSize="@dimen/font_small"
+        android:textColor="@color/colorBlack"
+        />
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/main_btn_deactivate_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_small"
+        android:text="停止设备"/>
+    <TextView
+        android:id="@+id/main_tv_deactivate_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_small"
+        android:text="DSP返回码："/>
+
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="@dimen/font_small"-->
+        <!--android:text="VendorId:"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/main_tv_vendor_id"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="@dimen/font_small"-->
+        <!--android:text="null"-->
+        <!--/>-->
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="@dimen/font_small"-->
+        <!--android:text="ProductId:"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/main_tv_product_id"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="@dimen/font_small"-->
+        <!--android:text="null"-->
+        <!--/>-->
+
+</LinearLayout>

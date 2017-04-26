@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        //检测设备
+        <include layout="@layout/widget_detect_device"/>
+        //获得可用内存信息
+        <include layout="@layout/widget_show_max_memory"/>
+        //升级设备
+        <include layout="@layout/widget_upgrade_dsp"/>
+        //发送升级包
+        <include layout="@layout/widget_send_upgrade_package"/>
+        //启动设备
+        <include layout="@layout/widget_activate_dsp"/>
+        //停止设备
+        <include layout="@layout/widget_deactivate_dsp"/>
+        //查询设备
+        <include layout="@layout/widget_get_dsp_info"/>
+        //获取设备运行状态
+        <include layout="@layout/widget_get_dsp_running_status"/>
+        //设置DSP参数
+        <include layout="@layout/widget_dsp_config"/>
+        //设置滤波参数
+        <include layout="@layout/widget_lv_params"/>
+        //启动原始数据传输
+        <include layout="@layout/widget_brand_transfer"/>
+        <include layout="@layout/activity_show_brand_trsf"/>
+        //启动基带数据传输
+        <include layout="@layout/widget_business_data_transfer"/>
+        <Button
+            android:id="@+id/main_btn_to_biz_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="业务数据专栏"/>
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DSP功能测试</string>
+    <string name="edit_text_hint_freq"><font size="8">默认98</font></string>
+    <string name="edit_text_hint_left_tone"><font size="8">默认36</font></string>
+    <string name="edit_text_hint_right_tone"><font size="8">默认45</font></string>
+</resources>
