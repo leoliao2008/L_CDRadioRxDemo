@@ -22,7 +22,7 @@
         android:theme="@style/AppTheme"
         >
         <activity
-            android:name=".activities.BusinessDemo"
+            android:name=".activities.MainActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -38,12 +38,6 @@
             <meta-data
                 android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
                 android:resource="@xml/device_filter" />
-
-        </activity>
-        <activity
-            android:name=".activities.MainActivity"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait" >
 
         </activity>
         <activity android:name=".activities.DSPInfo"
