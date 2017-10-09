@@ -219,7 +219,7 @@ public class MainActivity extends BaseActivity {
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode){
             case 194:
-                if(grantResults[0]==PackageManager.PERMISSION_DENIED){
+                if(grantResults.length>0&&grantResults[0]==PackageManager.PERMISSION_DENIED){
                     ToastUtil.showToast("本程序需要SD卡写入权限，否则会报错");
                     ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 101);
                 }
