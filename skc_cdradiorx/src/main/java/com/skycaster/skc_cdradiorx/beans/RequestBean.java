@@ -73,6 +73,7 @@ public class RequestBean {
 	/**
 	 * 当需要设置DSP基本参数时，通过此方法把参数放到请求体主体内容中。
 	 * 注意：如果之前已经给请求体设置了滤波参数，这里将会把滤波参数去除。
+	 * 不能给请求体同时设置基本参数和滤波参数。
 	 * @param dspConfig DSP参数对象
 	 */
 	public void setDspConfig(DSPParam dspConfig) {
@@ -86,6 +87,7 @@ public class RequestBean {
 	/**
 	 * 当需要设置DSP滤波参数时，通过此方法把参数放到请求体主体内容中。
 	 * 注意：如果之前已经给请求体设置了基本参数，这里将会把基本参数去除。
+	 * 不能给请求体同时设置基本参数和滤波参数。
 	 * @param lvParameter 滤波参数对象
 	 */
 	public void setLvParameter(LvParameter lvParameter) {
