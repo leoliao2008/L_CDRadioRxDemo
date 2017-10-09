@@ -33,6 +33,7 @@ import com.skycaster.skc_cdradiorx.utils.UsbUtil;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Arrays;
 
 /**
@@ -160,8 +161,9 @@ public class DSPManager {
                     final int frameCount= (int) (fileSize%4096==0?fileSize/4096:(fileSize/4096+1));//根据升级文件大小计算升级包个数
                     requestBean.setTotalFrame(frameCount);//初始化总帧数
                     short frameId=0;//初始化当前帧序号
+                    BufferedInputStream bis=null;
                     try {
-                        BufferedInputStream bis=new BufferedInputStream(new FileInputStream(upgradeFile));
+                        bis=new BufferedInputStream(new FileInputStream(upgradeFile));
                         while ((validLen=bis.read(validData))!=-1){
                             frameId++;
                             requestBean.setFrameId(frameId);
@@ -178,11 +180,11 @@ public class DSPManager {
                                 bis.close();
                                 return;
                             }
-                            final short finalFrameId = frameId;
+                            final short currentId = frameId;
                             CDRadioApplication.post(new Runnable() {
                                 @Override
                                 public void run() {
-                                    upgradeListener.onProgress(frameCount, finalFrameId);
+                                    upgradeListener.onProgress(frameCount, currentId);
                                 }
                             });
                         }
@@ -204,10 +206,19 @@ public class DSPManager {
                         }
                         upgradeFile=null;
                         upgradeRequest =null;
-                        bis.close();
+
                     } catch (Exception e) {
                         showLog(e.getMessage());
                         upgradeListener.onFinish(false);
+                    }finally {
+                        if(bis!=null){
+                            try {
+                                bis.close();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            bis=null;
+                        }
                     }
                 }
             }).start();
