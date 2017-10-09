@@ -3,6 +3,7 @@ package com.skycaster.l_cdradiorxdemo.activities;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -33,6 +34,7 @@ import com.skycaster.l_cdradiorxdemo.adapters.DataQualityAdapter;
 import com.skycaster.l_cdradiorxdemo.adapters.HistoryLogAdapter;
 import com.skycaster.l_cdradiorxdemo.adapters.TunerDataAdapter;
 import com.skycaster.l_cdradiorxdemo.beans.TunerData;
+import com.skycaster.l_cdradiorxdemo.data.StaticData;
 import com.skycaster.l_cdradiorxdemo.utils.AlertDialogueUtils;
 import com.skycaster.l_cdradiorxdemo.utils.LocalFileUtils;
 import com.skycaster.l_cdradiorxdemo.utils.TimingUtils;
@@ -48,6 +50,7 @@ import com.skycaster.skc_cdradiorx.intface.RequestCallBack;
 import com.skycaster.skc_cdradiorx.manager.DSPManager;
 import com.skycaster.skc_cdradiorx.utils.LogUtils;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 /**
@@ -104,6 +107,7 @@ public class MainActivity extends BaseActivity {
     private ToggleButton tgbtn_isKeepBandData;
     private boolean isKeepBandData;
     private Button btn_showLog;
+    private SharedPreferences mSp;
 
 
     public static void startActivity(Activity context){
@@ -155,6 +159,30 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+
+        mSp=getSharedPreferences(StaticData.SP_NAME,MODE_PRIVATE);
+        float f=mSp.getFloat(StaticData.FREQ, -999);
+        int left=mSp.getInt(StaticData.LEFT_TUNE, -999);
+        int right=mSp.getInt(StaticData.RIGHT_TUNE,-999);
+        if(f!=-999){
+            freq=f;
+            String sf=String.valueOf(freq);
+            edt_setFreq.setText(sf);
+            edt_setFreq.setSelection(sf.length());
+        }
+        if(left!=-999){
+            toneLeft=left;
+            String sl=String.valueOf(toneLeft);
+            edt_toneLeft.setText(sl);
+            edt_toneLeft.setSelection(sl.length());
+        }
+        if(right!=-999){
+            toneRight=right;
+            String sr=String.valueOf(toneRight);
+            edt_toneRight.setText(sr);
+            edt_toneRight.setSelection(sr.length());
+        }
+
 
         if(Build.VERSION.SDK_INT>=23){
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 194);
@@ -252,6 +280,11 @@ public class MainActivity extends BaseActivity {
                 }
                 try {
                     if (dspManager.apiOpenCDRadio(freq, toneLeft, toneRight)) {
+                        SharedPreferences.Editor edit = mSp.edit();
+                        edit.putFloat(StaticData.FREQ,BigDecimal.valueOf(freq).floatValue());
+                        edit.putInt(StaticData.LEFT_TUNE, toneLeft);
+                        edit.putInt(StaticData.RIGHT_TUNE,toneRight);
+                        edit.apply();
                         ToastUtil.showToast("设置参数成功");
                     } else {
                         ToastUtil.showToast("设置参数失败");
