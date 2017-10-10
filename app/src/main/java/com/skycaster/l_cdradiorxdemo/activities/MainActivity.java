@@ -210,7 +210,7 @@ public class MainActivity extends BaseActivity {
             case 194:
                 if(grantResults.length>0&&grantResults[0]==PackageManager.PERMISSION_DENIED){
                     ToastUtil.showToast("本程序需要SD卡写入权限，否则会报错");
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 101);
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 194);
                 }
                 break;
             default:
